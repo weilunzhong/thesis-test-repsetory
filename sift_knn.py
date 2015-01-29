@@ -5,10 +5,10 @@ import os
 import urllib2
 
 #load images
-img_1 = cv2.imread('E:/Weilun_thesis/testing code/images.jpg')
+img_1 = cv2.imread('/home/weilun/Documents/vionlabs/proj3/data/test/bedroom/image_0003.jpg')
 gray_1= cv2.cvtColor(img_1,cv2.COLOR_BGR2GRAY)
 
-img_2 = cv2.imread('E:/Weilun_thesis/testing code/box_in_scene.png')
+img_2 = cv2.imread('/home/weilun/Documents/vionlabs/proj3/data/test/bedroom/image_0004.jpg')
 gray_2= cv2.cvtColor(img_2,cv2.COLOR_BGR2GRAY)
 
 
@@ -49,8 +49,8 @@ def filter_matches(kp1, kp2, matches, ratio = 0.75):
 # Finding the matching pair os sift features
 p1, p2, kp_pairs, mkp1, mkp2 = filter_matches(kp_1, kp_2, raw_matches)
 img_withfeature=cv2.drawKeypoints(gray_1,mkp1,flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-cv2.imshow('image',img_withfeature)
-cv2.waitKey(0)
+#cv2.imshow('image',img_withfeature)
+#cv2.waitKey(0)
 
 
 
@@ -80,8 +80,8 @@ for (x1, y1), (x2, y2), inlier in zip(p1, p2, status):
         cv2.circle(vis, (x2, y2), 2, color, -1)
         cv2.line(vis, (x1, y1), (x2, y2), color)
 
-#cv2.imshow('image',vis)
-#cv2.waitKey(0)
+cv2.imshow('image',vis)
+cv2.waitKey(0)
 
 
 
