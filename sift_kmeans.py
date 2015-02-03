@@ -11,7 +11,6 @@ gray_1= cv2.cvtColor(img_1,cv2.COLOR_BGR2GRAY)
 
 #img_2 = cv2.imread('/home/weilun/Documents/vionlabs/proj3/data/test/bedroom/image_0004.jpg')
 img_2 = cv2.imread('/home/vion-labs-server/Documents/Weilun thesis/proj3/data/test/bedroom/image_0004.jpg')
-
 gray_2= cv2.cvtColor(img_2,cv2.COLOR_BGR2GRAY)
 
 

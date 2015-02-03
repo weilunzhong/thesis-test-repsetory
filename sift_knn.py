@@ -57,7 +57,6 @@ img_withfeature=cv2.drawKeypoints(gray_1,mkp1,flags=cv2.DRAW_MATCHES_FLAGS_DRAW_
 
 # Calculating the 
 H, status = cv2.findHomography(p1, p2, cv2.RANSAC, 5.0)
-#print (H)
 
 
 
